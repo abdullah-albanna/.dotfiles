@@ -10,17 +10,34 @@
 
 
 !alacritty/
+!alacritty/**
 
 
 !foot/
+!foot/**
+
 !fish/
+!fish/**
+
 !fish/
+!fish/**
+
 !tmux/
+!tmux/**
 
 
 !ags/
+!ags/**
+
 !hypr/
+!hypr/**
+
 !rofi/
+!rofi/**
+
 !waybar/
+!waybar/**
+
 !wlogout/
+!wlogout/**
 
