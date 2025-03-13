@@ -2,6 +2,7 @@
 *
 
 !.gitignore
+
 !nvim/
 !nvim/**
 
@@ -11,6 +12,8 @@
 
 !alacritty/
 !alacritty/**
+
+
 
 
 !foot/
@@ -24,6 +27,10 @@
 
 !tmux/
 !tmux/**
+
+!.tmux.conf
+
+
 
 
 !ags/
