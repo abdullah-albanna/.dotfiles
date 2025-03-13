@@ -4,7 +4,7 @@
 !.gitignore
 !nvim/
 !nvim/**
-!helix/
+!helix/**
 
 
 !alacritty/
