@@ -1,0 +1,24 @@
+# Ignore everything by default
+*
+
+!.gitignore
+!nvim/
+!nvim/**
+!helix/
+
+
+!alacritty/
+
+
+!foot/
+!fish/
+!fish/
+!tmux/
+
+
+!ags/
+!hypr/
+!rofi/
+!waybar/
+!wlogout/
+
