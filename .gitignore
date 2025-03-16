@@ -4,51 +4,48 @@
 !.gitignore
 
 
-!.config/
+!nvim/
+!nvim/**
 
-!.config/nvim/
-!.config/nvim/**
-
-!.config/helix/
-!.config/helix/**
+!helix/
+!helix/**
 
 
-!.config/alacritty/
-!.config/alacritty/**
+!alacritty/
+!alacritty/**
 
 
 
 
-!.config/foot/
-!.config/foot/**
+!foot/
+!foot/**
 
-!.config/fish/
-!.config/fish/**
+!fish/
+!fish/**
 
-!.config/fish/
-!.config/fish/**
+!fish/
+!fish/**
 
-!.config/tmux/
-!.config/tmux/**
+!tmux/
+!tmux/**
 
-!.tmux.conf
-!.tmux/
-!.tmux/**
-
+!tmux/
+!tmux/**
 
 
-!.config/ags/
-!.config/ags/**
 
-!.config/hypr/
-!.config/hypr/**
+!ags/
+!ags/**
 
-!.config/rofi/
-!.config/rofi/**
+!hypr/
+!hypr/**
 
-!.config/waybar/
-!.config/waybar/**
+!rofi/
+!rofi/**
 
-!.config/wlogout/
-!.config/wlogout/**
+!waybar/
+!waybar/**
+
+!wlogout/
+!wlogout/**
 

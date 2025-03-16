@@ -21,8 +21,12 @@ zoxide init fish | source
 ## Rust
 # Enable a shared Cargo target directory to cut down on disk usage
 set -x CARGO_TARGET_DIR $HOME/.cargo/shared_target
+set -x XDG_CONFIG_HOME $HOME/.config 
+
+
 # Ensure that Cargo binaries are in the PATH
 set PATH $HOME/.cargo/bin/ $PATH
+set EDITOR nvim
 
 
 # Helpful aliases
