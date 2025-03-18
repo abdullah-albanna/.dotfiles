@@ -1,7 +1,7 @@
 local M = {
   {
     "stevearc/conform.nvim",
-    -- event = "BufWritePre",
+    event = "BufWritePre",
     opts = require "configs.conform",
   },
 

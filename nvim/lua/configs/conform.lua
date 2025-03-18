@@ -1,4 +1,5 @@
 local options = {
+  async = true,
   formatters_by_ft = {
     lua = { "stylua" },
     css = { "prettier" },
@@ -12,9 +13,8 @@ local options = {
     svelte = { "prettier" },
   },
 
-  format_on_save = {
-    -- These options will be passed to conform.format()
-    -- timeout_ms = 2500,
+  format_after_save = {
+    async = true,
     lsp_format = "fallback",
     lsp_fallback = true,
   },

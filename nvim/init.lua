@@ -46,17 +46,6 @@ vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
 
 require("base46").toggle_transparency()
 
--- asynchronously format, we don't want it to freeze out buffer
-vim.api.nvim_create_autocmd("BufWritePre", {
-  pattern = "*",
-  callback = function(args)
-    require("conform").format {
-      bufnr = args.buf,
-      async = true,
-    }
-  end,
-})
-
 -- -- Enable text wrapping
 -- vim.opt.wrap = true
 --
