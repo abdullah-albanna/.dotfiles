@@ -9,11 +9,13 @@ local options = {
     json = { "prettier" },
     yaml = { "prettier" },
     markdown = { "prettier" },
+    svelte = { "prettier" },
   },
 
   format_on_save = {
     -- These options will be passed to conform.format()
-    timeout_ms = 500,
+    -- timeout_ms = 2500,
+    lsp_format = "fallback",
     lsp_fallback = true,
   },
 }

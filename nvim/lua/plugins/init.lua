@@ -1,7 +1,7 @@
 local M = {
   {
     "stevearc/conform.nvim",
-    event = "BufWritePre",
+    -- event = "BufWritePre",
     opts = require "configs.conform",
   },
 
@@ -26,6 +26,7 @@ local M = {
           "rust",
           "python",
           "vue",
+          "svelte",
         },
         highlight = { enable = true },
       }
