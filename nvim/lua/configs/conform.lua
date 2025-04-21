@@ -11,6 +11,7 @@ local options = {
     yaml = { "prettier" },
     markdown = { "prettier" },
     svelte = { "prettier" },
+    python = { "ruff", "isort" },
   },
 
   format_after_save = {

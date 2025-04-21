@@ -36,7 +36,8 @@ command -q exa; and alias ll="exa -bghl --git --color=automatic"
 set -x MANPAGER "nvim -c 'Man!' -o -"
 
 alias exa="exa -abghl --git --color=automatic"
-alias cp="rsync -avzhPc"
+alias rsync="rsync -avzhPc"
+alias lssize='du -h --max-depth=1 | sort -rh'
 
 # Fisher!
 if not functions -q fisher

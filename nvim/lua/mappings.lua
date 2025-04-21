@@ -53,3 +53,6 @@ map("n", "<Leader>td", "<cmd>TodoTelescope<CR>", { noremap = true, silent = true
 map("n", "<Leader>ih", function()
   vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
 end, { desc = "Toggle inlay hints", noremap = true, silent = true })
+
+map("n", "j", "gj", { noremap = true, silent = true })
+map("n", "k", "gk", { noremap = true, silent = true })
