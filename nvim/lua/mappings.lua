@@ -65,3 +65,7 @@ map("n", "x", '"_x', opts)
 map("n", "X", '"_X', opts)
 map("v", "d", '"_d', opts)
 map("v", "x", '"_x', opts)
+
+-- Reselect again when indenting with > or <
+map("v", ">", ">gv", opts)
+map("v", "<", "<gv", opts)
