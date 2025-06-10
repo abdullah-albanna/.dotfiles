@@ -12,11 +12,30 @@ if status is-interactive
 
 end
 
+function ejectdev
+  if test (count $argv) -ne 1
+    echo "Usage: ejectdev <device_name> (e.g. sdb)"
+    return 1
+  end
+
+  set dev /dev/$argv[1]
+
+  # unmount all partitions
+  for part in (lsblk -ln -o NAME $dev | tail -n +2)
+    echo "Unmounting /dev/$part"
+    sudo umount /dev/$part
+  end
+
+  echo "Powering off $dev"
+  sudo udisksctl power-off -b $dev
+end
+
+
 # Configure my shell's prompt
 starship init fish | source
 
 # Make it easy to switch to commonly-used directories
-zoxide init fish | source
+zoxide init fish --cmd cd | source
 
 ## Rust
 # Enable a shared Cargo target directory to cut down on disk usage
