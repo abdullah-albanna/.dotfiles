@@ -27,8 +27,9 @@ map(
   "<cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>",
   merge_opts { desc = "Debugger set conditional breakpoint" }
 )
-map("n", "<Leader>de", "<cmd>lua require'dap'.terminate()<CR>", merge_opts { desc = "Debugger reset" })
-map("n", "<Leader>dr", "<cmd>lua require'dap'.run_last()<CR>", merge_opts { desc = "Debugger run last" })
+
+-- rustaceanvim
+map("n", "<Leader>dt", "<cmd>lua vim.cmd('RustLsp testables')<CR>", { desc = "Debugger testables" })
 
 -- moving lines
 map("n", "<A-C-k>", ":m .-2<CR>==", opts)
@@ -69,3 +70,6 @@ map("v", "x", '"_x', opts)
 -- Reselect again when indenting with > or <
 map("v", ">", ">gv", opts)
 map("v", "<", "<gv", opts)
+
+-- map("n", "K", require("hover").hover, { desc = "hover.nvim" })
+-- map("n", "gK", require("hover").hover_select, { desc = "hover.nvim (select)" })

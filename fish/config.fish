@@ -31,7 +31,6 @@ function ejectdev
 end
 
 
-# Configure my shell's prompt
 starship init fish | source
 
 # Make it easy to switch to commonly-used directories
@@ -45,6 +44,8 @@ set -x XDG_CONFIG_HOME $HOME/.config
 
 # Ensure that Cargo binaries are in the PATH
 set PATH $HOME/.cargo/bin/ $PATH
+set PATH $HOME/.local/share/nvim/mason/bin $PATH
+
 set EDITOR nvim
 
 
@@ -65,9 +66,11 @@ if not functions -q fisher
     fish -c fisher
 end
 
-#if test -f ~/.cache/ags/user/generated/terminal/sequences.txt
-#    cat ~/.cache/ags/user/generated/terminal/sequences.txt
-#end
+if not set -q TMUX
+    if test -f ~/.cache/ags/user/generated/terminal/sequences.txt
+        cat ~/.cache/ags/user/generated/terminal/sequences.txt
+    end
+end
 
 alias pamcan=pacman
 
@@ -97,5 +100,4 @@ set -U fish_cursor_default block
 # show underscore when in replace ('r')
 set fish_cursor_replace_one underscore
 set fish_cursor_replace underscore
-
 

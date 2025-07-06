@@ -24,3 +24,15 @@ lspconfig.volar.setup {
     },
   },
 }
+
+lspconfig.jdtls.setup {
+  cmd = { "jdtls" }, -- or your custom launch command
+  root_dir = lspconfig.util.root_pattern(".git", "mvnw", "gradlew"),
+  settings = {
+    java = {
+      format = {
+        enabled = true,
+      },
+    },
+  },
+}

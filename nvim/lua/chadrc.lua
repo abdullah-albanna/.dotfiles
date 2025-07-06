@@ -6,6 +6,7 @@
 local M = {}
 
 M.base46 = {
+  transparency = true,
   theme = "catppuccin",
 
   -- hl_override = {
@@ -20,5 +21,10 @@ M.base46 = {
 --     lazyload = false,
 --   },
 -- }
+--
+
+vim.keymap.set("n", "<leader>H", function()
+  vim.lsp.buf.hover()
+end, { desc = "Test fancy hover" })
 
 return M

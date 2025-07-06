@@ -40,11 +40,11 @@ vim.schedule(function()
   require "mappings"
 end)
 
-vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
-  border = "rounded",
-})
+-- Set a border for LSP hover and signature help popups
 
-require("base46").toggle_transparency()
+-- vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+--   border = "rounded",
+-- })
 
 -- -- Enable text wrapping
 -- vim.opt.wrap = true
