@@ -32,10 +32,10 @@ map(
 map("n", "<Leader>dt", "<cmd>lua vim.cmd('RustLsp testables')<CR>", { desc = "Debugger testables" })
 
 -- moving lines
-map("n", "<A-C-k>", ":m .-2<CR>==", opts)
-map("n", "<A-C-j>", ":m .+1<CR>==", opts)
-map("v", "<A-C-k>", ":m '<-2<CR>gv=gv", opts)
-map("v", "<A-C-j>", ":m '>+1<CR>gv=gv", opts)
+map("n", "<A-k>", ":m .-2<CR>==", opts)
+map("n", "<A-j>", ":m .+1<CR>==", opts)
+map("v", "<A-k>", ":m '<-2<CR>gv=gv", opts)
+map("v", "<A-j>", ":m '>+1<CR>gv=gv", opts)
 
 -- LSP
 map("n", "<Leader>ca", vim.lsp.buf.code_action, merge_opts { desc = "code action" })
@@ -73,3 +73,5 @@ map("v", "<", "<gv", opts)
 
 -- map("n", "K", require("hover").hover, { desc = "hover.nvim" })
 -- map("n", "gK", require("hover").hover_select, { desc = "hover.nvim (select)" })
+
+-- map("n", "<C-d>", "<C-d>zz")
