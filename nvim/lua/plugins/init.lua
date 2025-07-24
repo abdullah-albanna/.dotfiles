@@ -51,7 +51,6 @@ local M = {
     "williambosman/mason.nvim",
     opts = {
       ensure_installed = {
-        "ts_ls",
         "codelldb",
       },
     },
@@ -157,6 +156,27 @@ local M = {
     config = function()
       vim.g.suda_smart_edit = 1
     end,
+  },
+
+  {
+    "derektata/lorem.nvim",
+    lazy = false,
+    config = function()
+      require("lorem").opts {
+        sentence_length = "medium",
+        comma_chance = 0.2,
+        max_commas = 2,
+      }
+    end,
+  },
+
+  {
+    "MeanderingProgrammer/render-markdown.nvim",
+    dependencies = { "nvim-treesitter/nvim-treesitter", "echasnovski/mini.nvim" },
+    ---@module 'render-markdown'
+    ---@type render.md.UserConfig
+    opts = {},
+    lazy = false,
   },
 }
 

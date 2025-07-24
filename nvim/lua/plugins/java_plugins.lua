@@ -10,6 +10,12 @@ local M = {
     config = function()
       require("java").setup()
     end,
+    root_markers = {
+      "pom.xml",
+      "mvnw",
+      "gradlew",
+      ".git",
+    },
   },
 }
 
