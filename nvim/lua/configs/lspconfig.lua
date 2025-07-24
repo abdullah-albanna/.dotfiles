@@ -26,8 +26,8 @@ lspconfig.volar.setup {
 }
 
 lspconfig.jdtls.setup {
-  cmd = { "jdtls" }, -- or your custom launch command
-  root_dir = lspconfig.util.root_pattern(".git", "mvnw", "gradlew"),
+  cmd = { "jdtls" },
+  root_dir = vim.fs.dirname(vim.fs.find({ "gradlew", ".git", "mvnw" }, { upward = true })[0]),
   settings = {
     java = {
       format = {
