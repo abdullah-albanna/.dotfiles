@@ -40,6 +40,7 @@ zoxide init fish --cmd cd | source
 # Enable a shared Cargo target directory to cut down on disk usage
 set -x CARGO_TARGET_DIR $HOME/.cargo/shared_target
 set -x XDG_CONFIG_HOME $HOME/.config 
+set -x GIT_EDITOR nvim
 
 
 # Ensure that Cargo binaries are in the PATH
@@ -68,7 +69,8 @@ end
 
 if not set -q TMUX
     if test -f ~/.cache/ags/user/generated/terminal/sequences.txt
-        cat ~/.cache/ags/user/generated/terminal/sequences.txt
+        # cat ~/.cache/ags/user/generated/terminal/sequences.txt
+        cat ~/.local/state/caelestia/sequences.txt 2> /dev/null
     end
 end
 
