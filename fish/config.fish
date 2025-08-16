@@ -67,12 +67,12 @@ if not functions -q fisher
     fish -c fisher
 end
 
-if not set -q TMUX
-    if test -f ~/.cache/ags/user/generated/terminal/sequences.txt
-        # cat ~/.cache/ags/user/generated/terminal/sequences.txt
-        cat ~/.local/state/caelestia/sequences.txt 2> /dev/null
-    end
-end
+# if not set -q TMUX
+#     if test -f ~/.cache/ags/user/generated/terminal/sequences.txt
+#         # cat ~/.cache/ags/user/generated/terminal/sequences.txt
+#         cat ~/.local/state/caelestia/sequences.txt 2> /dev/null
+#     end
+# end
 
 alias pamcan=pacman
 
@@ -103,3 +103,15 @@ set -U fish_cursor_default block
 set fish_cursor_replace_one underscore
 set fish_cursor_replace underscore
 
+
+# pnpm
+set -gx PNPM_HOME "/home/abdullah/.local/share/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end
+
+# xdg 
+set -g XDG_CACHE_HOME $HOME/.cache
+set -g XDG_DATA_HOME $HOME/.local/share
+set -g XDG_STATE_HOME $HOME/.local/state
